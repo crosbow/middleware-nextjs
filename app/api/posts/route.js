@@ -4,6 +4,8 @@ import { cookies, headers } from "next/headers";
 export const GET = (request) => {
   const searchParams = request.nextUrl.searchParams;
 
+  console.log(request.cookies.has("test"));
+
   const query = searchParams.get("query");
 
   if (query) {
